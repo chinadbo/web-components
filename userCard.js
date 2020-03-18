@@ -1,43 +1,3 @@
-# web-components
-web components including custom elements, shadow DOM and HTML templates.
-
-## demo
-
-### HTML
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Components</title>
-  </head>
-  <body>
-    <user-card-one name="this is card one"></user-card-one>
-    <user-card-two name="this is card two"></user-card-two>
-    <user-card-two
-      name="this is card two,too"
-      avatar="https://randomuser.me/api/portraits/women/66.jpg"
-    ></user-card-two>
-
-    <user-card-two
-      name="this is card two, too, too"
-      avatar="https://randomuser.me/api/portraits/men/66.jpg"
-    >
-      <p slot="email">usercardtwo@email.com</p>
-      <p slot="mobile">08079-8090-898</p>
-    </user-card-two>
-
-    <script src="userCard.js"></script>
-  </body>
-</html>
-
-```
-
-### JavaScript
-
-```js
 class UserCardOne extends HTMLElement {
   constructor() {
     super();
@@ -118,4 +78,3 @@ class UserCardTwo extends HTMLElement {
 }
 
 window.customElements.define("user-card-two", UserCardTwo);
-```
